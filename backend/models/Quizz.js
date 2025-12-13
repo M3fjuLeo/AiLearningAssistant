@@ -87,7 +87,7 @@ const quizzSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Compound index
+// Index for faster queries
 quizzSchema.index({ userId: 1, documentId: 1 });
 
 const Quizz = mongoose.model("Quizz", quizzSchema);
